@@ -1,0 +1,51 @@
+# 1️⃣ Python Sanal Ortam (venv)
+.venv/
+env/
+venv/
+
+# 2️⃣ PyCache ve Derlenmiş Python Dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3️⃣ Jupyter Notebook Checkpoint'leri
+.ipynb_checkpoints/
+
+# 4️⃣ Sistem Dosyaları (Mac & Windows)
+.DS_Store
+Thumbs.db
+
+# 5️⃣ Log Dosyaları
+logs/
+*.log
+
+# 6️⃣ Model Dosyaları (Büyük Boyutlu)
+models/
+*.pt
+*.h5
+*.onnx
+*.pkl
+
+# 7️⃣ Veri Setleri ve Geçici Dosyalar
+data/raw/
+data/processed/
+*.csv
+*.json
+*.zip
+
+# 8️⃣ Config ve API Anahtarları
+config.yaml
+config/*.yaml
+config/settings.py
+*.env
+
+# 9️⃣ Docker, Build ve Derleme Dosyaları
+docker-compose.override.yml
+__pycache__/
+*.pid
+*.sock
+
+# 🔟 VSCode ve IDE Ayar Dosyaları
+.vscode/
+.idea/
+*.swp

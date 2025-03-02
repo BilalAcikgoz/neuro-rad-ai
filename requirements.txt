@@ -1,0 +1,12 @@
+numpy
+matplotlib
+opencv-python-headless
+nibabel
+scikit-learn
+torch
+torchvision
+torchaudio
+flask
+gunicorn
+docker
+
