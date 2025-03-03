@@ -1,0 +1,141 @@
+/* Common styles for the application */
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Upload page styles */
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    background-color: #e9ecef;
+    border-color: #6c757d;
+}
+
+.upload-area.highlight {
+    background-color: #e2e3e5;
+    border-color: #0d6efd;
+}
+
+#progress-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.file-info {
+    text-align: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Results page styles */
+.image-container {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Slider container styles */
+.slider-container {
+    width: 60%;
+    margin: 0 10px;
+}
+
+/* Comparison view styles */
+.comparison-view {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-panel {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.image-panel img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Slice navigation styles */
+.slice-navigation {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#slice-counter {
+    display: inline-block;
+    min-width: 100px;
+    padding: 5px 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Animation for slice transitions */
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.image-panel img {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .comparison-view {
+        flex-direction: column;
+    }
+    
+    .image-panel {
+        margin: 10px 0;
+    }
+    
+    .slider-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
