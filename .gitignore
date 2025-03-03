@@ -20,11 +20,11 @@ logs/
 *.log
 
 # 6️⃣ Model Dosyaları (Büyük Boyutlu)
-models/
-*.pt
-*.h5
-*.onnx
-*.pkl
+# models/
+# *.pt
+# *.h5
+# *.onnx
+# *.pkl
 
 # 7️⃣ Veri Setleri ve Geçici Dosyalar
 data/raw/
