@@ -18,8 +18,7 @@ import json
 # Add the project root directory to the Python module path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import the model
-from scripts.train import LightUNet3D
+from scripts.train import ImprovedUNet3D
 
 app = Flask(__name__)
 
@@ -27,10 +26,10 @@ app = Flask(__name__)
 MODEL_PATH = "models/best_brats_model.pt"
 
 # First create the model using the Model class
-model = LightUNet3D(in_channels=4, out_channels=2, base_filters=12)
+model = ImprovedUNet3D(in_channels=4, out_channels=2, base_filters=12)
 
 # After load weights
-with torch.serialization.safe_globals([LightUNet3D]):
+with torch.serialization.safe_globals([ImprovedUNet3D]):
     model = torch.load(MODEL_PATH, map_location=torch.device("cpu"), weights_only=False)
 
 model.eval()
